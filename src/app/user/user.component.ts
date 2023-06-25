@@ -10,9 +10,14 @@ export class UserComponent {
   childMessage: string = "Hello Parent"
   outputChildMessage: string = "Hello from Output child Message"
 
+  fromChildViaEvents: string = ''
   @Output() messageEvent = new EventEmitter<string>()
 
   sendMessage(){
     this.messageEvent.emit(this.outputChildMessage)
+  }
+
+  receiveMessage(event: any) {
+    this.fromChildViaEvents = event
   }
 }

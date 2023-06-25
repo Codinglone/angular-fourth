@@ -1,2 +1,4 @@
 <h1>User: {{ name }}</h1>
 <button (click)="sendMessage()">Click Me!🤗</button>
+<app-post (messageEvent)="receiveMessage($event)"></app-post>
+<h1>{{ fromChildViaEvents }}</h1>
