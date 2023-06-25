@@ -13,6 +13,6 @@ export class UserComponent {
   @Output() messageEvent = new EventEmitter<string>()
 
   sendMessage(){
-    alert("Clicked 🙏")
+    this.messageEvent.emit(this.outputChildMessage)
   }
 }

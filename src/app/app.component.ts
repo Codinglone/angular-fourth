@@ -17,6 +17,11 @@ export class AppComponent implements AfterViewInit {
     
   }
 
+  receiveMessage(event: any): any{
+    console.log(event);
+    
+  }
+
   constructor(){
 
   }
