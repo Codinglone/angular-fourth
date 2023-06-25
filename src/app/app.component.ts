@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 export class AppComponent implements AfterViewInit {
   title = 'angular-fourth';
   message: string = ''
+  fromChildOutput: string = ''
 
   @ViewChild(UserComponent) fromChild !: UserComponent
 
@@ -19,7 +20,7 @@ export class AppComponent implements AfterViewInit {
 
   receiveMessage(event: any): any{
     console.log(event);
-    
+    this.fromChildOutput = event
   }
 
   constructor(){
