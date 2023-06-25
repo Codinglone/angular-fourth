@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class UserComponent {
   name: string = "Chuzzi"
   childMessage: string = "Hello Parent"
+  outputChildMessage: string = "Hello from Output child Message"
+
+  @Output() messageEvent = new EventEmitter<string>()
+
+  sendMessage(){
+    alert("Clicked 🙏")
+  }
 }
